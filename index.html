@@ -1029,7 +1029,7 @@
             <form onsubmit="handleAdminLogin(event)">
                 <div class="modal-body">
                     <p style="font-size: 0.85rem; color: var(--earth-muted); margin-bottom: 12px;">
-                        رمز عبور ادمین را وارد کنید (رمز پیش‌فرض: <code>1234567891011</code>).
+                        رمز عبور ادمین را وارد کنید
                     </p>
                     <div class="form-group">
                         <label class="form-label" for="adminPasswordInput">رمز عبور مدیریت:</label>
@@ -1243,189 +1243,26 @@
     </button>
 
     <script>
-        /* === START_SYNC_DATA === */
-        // این بخش هنگام بروزرسانی در گیت‌هاب جایگزین می‌شود
-        const SERVER_MENU_VERSION = "2026.10.1";
-
+             /* === START_SYNC_DATA === */
+        const SERVER_MENU_VERSION = "v_1792678946382";
+        
         const DEFAULT_CAFE_INFO = {
-            title: 'کافه سنتی میراژ',
-            tagline: 'سرو انواع صبحانه سنتی، قهوه، نوشیدنی‌های گرم و سرد، چای و دمنوش',
-            phone: '09386963359',
-            instagram: 'miragecafee',
-            address: 'شوشتر، کوی نیرو، روبه‌روی اداره آب و فاضلاب'
+            "title": "کافه سنتی میراژ",
+            "tagline": "سرو انواع صبحانه سنتی، قهوه، نوشیدنی‌های گرم و سرد، چای و دمنوش",
+            "phone": "09386963359",
+            "instagram": "miragecafee",
+            "address": "شوشتر، کوی نیرو، روبه‌روی اداره آب و فاضلاب"
         };
-
+        
         const DEFAULT_MENU_ITEMS = [
             {
-                id: 'item_bf_1',
-                category: 'breakfast',
-                title: 'خوراک لوبیا و املت در کاسه سفالی و سینی مسی',
-                price: 120000,
-                desc: 'سرو شده در کاسه سفالی روی سینی مسی قلم‌زنی به همراه نان کنجدی تنوری داغ، روغن حیوانی و یک استکان چای کمرباریک.',
-                available: true,
-                badge: 'ویژه بنر میراژ'
-            },
-            {
-                id: 'item_bf_2',
-                category: 'breakfast',
-                title: 'سینی صبحانه شاهانه سرای میراژ',
-                price: 255000,
-                desc: 'سرشیر محلی، عسل طبیعی، پنیر تبریز، گردو، حلورده، کره محلی، تخم‌مرغ نیمرو و قوری چای تازه دم.',
-                available: true,
-                badge: 'پیشنهاد ویژه'
-            },
-            {
-                id: 'item_bf_3',
-                category: 'breakfast',
-                title: 'املت گوجه‌فرنگی محلی دو زرده',
-                price: 115000,
-                desc: 'تخم‌مرغ محلی و گوجه‌فرنگی جاافتاده با کره، فلفل سیاه، خیارشور، زیتون و نان داغ.',
-                available: true,
-                badge: 'پرفروش'
-            },
-            {
-                id: 'item_bf_4',
-                category: 'breakfast',
-                title: 'عدسی سنتی با روغن کرمانشاهی',
-                price: 98000,
-                desc: 'عدس محلی پخته‌شده با ادویه سنتی، پیاز داغ، روغن کرمانشاهی و لیموترش تازه.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_cf_1',
-                category: 'coffee',
-                title: 'قهوه ترک اصیل در جذوه مسی شنی',
-                price: 78000,
-                desc: 'قهوه ترک تازه آسیاب‌شده دم‌آوری شده در جذوه مسی سنتی با فوم غلیظ، همراه با راحت‌الحلقوم و شکلات.',
-                available: true,
-                badge: 'امضای میراژ'
-            },
-            {
-                id: 'item_cf_2',
-                category: 'coffee',
-                title: 'اسپرسو دبل عربیکا و روبوستا',
-                price: 68000,
-                desc: 'عصاره خالص دانه‌های قهوه رست مدیوم با کرمای طلایی و عطر دلنشین.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_cf_3',
-                category: 'coffee',
-                title: 'کاپوچینو و لاته آرت مخصوص',
-                price: 88000,
-                desc: 'ترکیب اسپرسو با شیر بخارداده شده لطیف و فوم مخملی.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_cf_4',
-                category: 'coffee',
-                title: 'آیس لاته کارامل و موهیتو نعنا تازه',
-                price: 95000,
-                desc: 'نوشیدنی خنک و گوارا با برگ‌های نعنا تازه، لیموترش و یخ خردشده.',
-                available: true,
-                badge: 'خنک و محبوب'
-            },
-            {
-                id: 'item_tea_1',
-                category: 'tea',
-                title: 'چای قندپهلو در استکان کمرباریک',
-                price: 38000,
-                desc: 'چای سرگل بهاره دم‌کشیده روی سماور، سرو در استکان کمرباریک با قند، نبات زعفرانی و نقل.',
-                available: true,
-                badge: 'اصیل ایرانی'
-            },
-            {
-                id: 'item_tea_2',
-                category: 'tea',
-                title: 'قوری چای زعفرانی و هل سبز اعلا',
-                price: 96000,
-                desc: 'قوری چای ممتاز لاهیجان با زعفران قائنات، غنچه گل محمدی و هل سبز.',
-                available: true,
-                badge: 'مخصوص دورهمی'
-            },
-            {
-                id: 'item_tea_3',
-                category: 'tea',
-                title: 'شیر داغ، عسل و زعفران',
-                price: 82000,
-                desc: 'شیر محلی گرم با عسل طبیعی کوهستان، زعفران دم‌کرده و خلال پسته.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_hb_1',
-                category: 'herbal',
-                title: 'دمنوش گل‌گاوزبان، بهارنارنج و لیموعمانی',
-                price: 94000,
-                desc: 'سرو در قوری شیشه‌ای پیرکس وارمردار به همراه نبات زعفرانی؛ آرام‌بخش و نشاط‌آور.',
-                available: true,
-                badge: 'آرام‌بخش'
-            },
-            {
-                id: 'item_hb_2',
-                category: 'herbal',
-                title: 'دمنوش سیب، به و چوب دارچین',
-                price: 90000,
-                desc: 'تکه‌های به و سیب خشک کاراملی‌شده با چوب دارچین و هل در قوری شیشه‌ای.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_hb_3',
-                category: 'herbal',
-                title: 'شربت زعفران، تخم‌شربتی و بیدمشک',
-                price: 76000,
-                desc: 'شربت سنتی خنک با گلاب دوآتشه، زعفران، خاکشیر و تخم‌شربتی و لیموترش تازه.',
-                available: true,
-                badge: 'پیشنهاد تابستان'
-            },
-            {
-                id: 'item_ds_1',
-                category: 'dessert',
-                title: 'باقلوا سنتی پسته و بادام',
-                price: 112000,
-                desc: 'چهار تکه باقلوای لوزی اشباع‌شده با شهد گلاب و هل و مغز پسته اعلا.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_ds_2',
-                category: 'dessert',
-                title: 'رنگینک مجلسی خرما و گردوی خوزستان',
-                price: 108000,
-                desc: 'رطب تازه مغزدار شده با گردو، آرد تفت‌خورده در کره محلی، دارچین و پودر پسته.',
-                available: true,
-                badge: 'ویژه جنوب'
-            },
-            {
-                id: 'item_ds_3',
-                category: 'dessert',
-                title: 'گوش‌فیل زعفرانی و دوغ محلی نعنایی',
-                price: 95000,
-                desc: 'ترکیب خاطره‌انگیز گوش‌فیل ترد همراه با دوغ خنک محلی و گل‌سرخ.',
-                available: true,
-                badge: ''
-            },
-            {
-                id: 'item_hk_1',
-                category: 'hookah',
-                title: 'سرویس کامل قلیان خوانسار و چای سماوری',
-                price: 295000,
-                desc: 'قلیان چوب گردو با تنباکوی خوانسار اعلا همراه با قوری چای، نبات، خرما و تنقلات.',
-                available: true,
-                badge: 'سرویس کامل'
-            },
-            {
-                id: 'item_hk_2',
-                category: 'hookah',
-                title: 'سرویس قلیان سنتی طعم‌دار ویژه میراژ',
-                price: 280000,
-                desc: 'طعم‌های انتخابی (دوسیب، لیمو نعنا، پرتقال خامه، بلوبری) با زغال لیمو طبیعی و سرویس چای.',
-                available: true,
-                badge: ''
+                "id": "item_1792678820357",
+                "title": "اسپرسو تک",
+                "category": "coffee",
+                "price": 90000,
+                "badge": "",
+                "desc": "اسپرسو تک",
+                "available": true
             }
         ];
         /* === END_SYNC_DATA === */
