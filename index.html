@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>کافه سنتی میراژ | Cafe Mirage - منوی دیجیتال و سرای اصالت</title>
     <style>
         :root {
@@ -74,7 +77,6 @@
             padding: 36px 20px 30px;
             text-align: center;
             color: #FFF8EC;
-            /* بافت چوب گردوی تیره به همراه نورپردازی طلایی */
             background: 
                 radial-gradient(ellipse at 25% 15%, rgba(255, 215, 110, 0.22) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 50%, rgba(54, 31, 19, 0.92) 0%, rgba(20, 11, 6, 0.98) 100%),
@@ -90,7 +92,6 @@
             transition: transform 0.35s ease;
         }
 
-        /* لچکی‌های اسلیمی فیروزه‌ای و لاجوردی در چهار گوشه بنر */
         .corner-spandrel {
             position: absolute;
             width: 115px;
@@ -104,7 +105,6 @@
         .corner-spandrel.bottom-right { bottom: 0; right: 0; transform: scaleY(-1); }
         .corner-spandrel.bottom-left { bottom: 0; left: 0; transform: scale(-1, -1); }
 
-        /* ذرات نور طلایی معلق */
         .golden-spotlight {
             position: absolute;
             top: -80px;
@@ -121,7 +121,6 @@
             100% { opacity: 1; transform: scale(1.1); }
         }
 
-        /* لوگوی سه بعدی CM کافه میراژ */
         .logo-3d-stage {
             position: relative;
             z-index: 3;
@@ -143,15 +142,12 @@
             filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.75));
         }
 
-        /* بخار متحرک بالای فنجان لوگو */
         .steam-path {
             stroke-dasharray: 24;
             stroke-dashoffset: 24;
             animation: steamRise 3.2s ease-in-out infinite;
         }
-        .steam-path.s2 {
-            animation-delay: 1.4s;
-        }
+        .steam-path.s2 { animation-delay: 1.4s; }
         @keyframes steamRise {
             0% { stroke-dashoffset: 24; opacity: 0; transform: translateY(4px); }
             50% { opacity: 0.75; }
@@ -194,7 +190,6 @@
             text-shadow: 0 2px 6px rgba(0, 0, 0, 0.9);
         }
 
-        /* کتیبه‌های طلایی اطلاعات تماس، اینستاگرام و آدرس شوشتر */
         .banner-plaques-wrap {
             position: relative;
             z-index: 3;
@@ -278,11 +273,7 @@
             gap: 10px;
         }
 
-        .search-box-wrap {
-            position: relative;
-            width: 100%;
-        }
-
+        .search-box-wrap { position: relative; width: 100%; }
         .search-input {
             width: 100%;
             padding: 12px 44px 12px 40px;
@@ -296,7 +287,6 @@
             box-shadow: inset 0 2px 5px rgba(0,0,0,0.03);
             transition: all 0.25s ease;
         }
-
         .search-input:focus {
             border-color: var(--turquoise);
             box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.15);
@@ -358,31 +348,19 @@
             transition: all 0.2s ease;
             user-select: none;
         }
-
-        .cat-pill:hover {
-            transform: translateY(-2px);
-            border-color: var(--gold);
-        }
-
-        .cat-pill:active {
-            transform: translateY(1px);
-            box-shadow: 0 1px 0 #D5BC8D;
-        }
-
+        .cat-pill:hover { transform: translateY(-2px); border-color: var(--gold); }
         .cat-pill.active {
             background: linear-gradient(135deg, var(--turquoise) 0%, var(--turquoise-dark) 100%);
             color: #FFFDF9;
             border-color: var(--gold);
             box-shadow: 0 3px 0 #072925, 0 6px 14px rgba(15, 118, 110, 0.35);
         }
-
         .cat-pill .cat-count {
             font-size: 0.75rem;
             padding: 1px 8px;
             border-radius: 20px;
             background: rgba(0, 0, 0, 0.08);
         }
-
         .cat-pill.active .cat-count {
             background: var(--gold);
             color: var(--wood-darkest);
@@ -396,10 +374,7 @@
             padding: 24px 16px 120px;
         }
 
-        .category-section {
-            margin-bottom: 38px;
-        }
-
+        .category-section { margin-bottom: 38px; }
         .category-header {
             display: flex;
             align-items: center;
@@ -425,18 +400,8 @@
             flex-shrink: 0;
             box-shadow: 0 4px 10px rgba(34, 19, 11, 0.25);
         }
-
-        .category-title {
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: var(--wood-dark);
-        }
-
-        .category-sub {
-            font-size: 0.82rem;
-            color: var(--earth-muted);
-            margin-right: auto;
-        }
+        .category-title { font-size: 1.3rem; font-weight: 900; color: var(--wood-dark); }
+        .category-sub { font-size: 0.82rem; color: var(--earth-muted); margin-right: auto; }
 
         .menu-grid {
             display: grid;
@@ -454,56 +419,24 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            box-shadow: 
-                0 6px 0 #E2CFA9,
-                var(--shadow-card);
+            box-shadow: 0 6px 0 #E2CFA9, var(--shadow-card);
             transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s ease, border-color 0.28s ease;
             overflow: hidden;
             transform-style: preserve-3d;
         }
-
-        /* نوار کاشی فیروزه‌ای و طلایی بالای هر کارت */
         .menu-card::before {
             content: "";
             position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
+            top: 0; right: 0; left: 0;
             height: 6px;
             background: linear-gradient(90deg, var(--turquoise), var(--gold), var(--wood-medium), var(--gold), var(--turquoise));
         }
-
-        /* افکت درخشش سه‌بعدی هنگام هاور */
-        .menu-card::after {
-            content: "";
-            position: absolute;
-            top: -50%;
-            left: -60%;
-            width: 45%;
-            height: 200%;
-            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255, 232, 163, 0.35) 50%, rgba(255,255,255,0) 100%);
-            transform: rotate(25deg);
-            transition: left 0.65s ease;
-            pointer-events: none;
-        }
-
         .menu-card:hover {
             transform: translateY(-6px) rotateX(2deg);
             border-color: var(--gold);
-            box-shadow: 
-                0 10px 0 #D4B882,
-                0 18px 32px rgba(34, 19, 11, 0.18);
+            box-shadow: 0 10px 0 #D4B882, 0 18px 32px rgba(34, 19, 11, 0.18);
         }
-
-        .menu-card:hover::after {
-            left: 130%;
-        }
-
-        .menu-card.unavailable {
-            opacity: 0.65;
-            background: #F3EDE2;
-            box-shadow: none;
-        }
+        .menu-card.unavailable { opacity: 0.65; background: #F3EDE2; box-shadow: none; }
 
         .card-top {
             display: flex;
@@ -512,14 +445,7 @@
             gap: 10px;
             margin-bottom: 8px;
         }
-
-        .item-title {
-            font-size: 1.08rem;
-            font-weight: 800;
-            color: var(--wood-darkest);
-            line-height: 1.45;
-        }
-
+        .item-title { font-size: 1.08rem; font-weight: 800; color: var(--wood-darkest); line-height: 1.45; }
         .badge-status {
             font-size: 0.73rem;
             font-weight: 800;
@@ -528,26 +454,17 @@
             white-space: nowrap;
             flex-shrink: 0;
         }
-
         .badge-special {
             background: linear-gradient(135deg, #FFF5D6, #FCE49C);
             color: #704B00;
             border: 1px solid var(--gold);
-            box-shadow: 0 2px 6px rgba(212, 175, 55, 0.25);
         }
-
         .badge-out {
             background: #FDE8E8;
             color: var(--danger);
             border: 1px solid #F5B5B5;
         }
-
-        .item-desc {
-            font-size: 0.86rem;
-            color: var(--earth-muted);
-            margin-bottom: 16px;
-            text-align: justify;
-        }
+        .item-desc { font-size: 0.86rem; color: var(--earth-muted); margin-bottom: 16px; text-align: justify; }
 
         .card-footer {
             display: flex;
@@ -557,7 +474,6 @@
             border-top: 1.5px dashed var(--border-ornate);
             gap: 8px;
         }
-
         .price-wrap {
             display: flex;
             align-items: baseline;
@@ -567,18 +483,8 @@
             border-radius: 10px;
             border: 1px solid #E9D6B5;
         }
-
-        .price-value {
-            font-size: 1.18rem;
-            font-weight: 900;
-            color: var(--crimson);
-        }
-
-        .price-unit {
-            font-size: 0.76rem;
-            color: var(--earth-muted);
-            font-weight: 700;
-        }
+        .price-value { font-size: 1.18rem; font-weight: 900; color: var(--crimson); }
+        .price-unit { font-size: 0.76rem; color: var(--earth-muted); font-weight: 700; }
 
         .btn-add-initial {
             background: linear-gradient(180deg, var(--turquoise-bright) 0%, var(--turquoise) 100%);
@@ -594,18 +500,7 @@
             align-items: center;
             gap: 5px;
             box-shadow: 0 4px 0 var(--turquoise-dark);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
-
-        .btn-add-initial:hover {
-            transform: translateY(-1px);
-        }
-
-        .btn-add-initial:active {
-            transform: translateY(2px);
-            box-shadow: 0 1px 0 var(--turquoise-dark);
-        }
-
         .qty-stepper {
             display: inline-flex;
             align-items: center;
@@ -613,12 +508,9 @@
             border: 1.5px solid var(--gold);
             border-radius: 11px;
             padding: 2px;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.08);
         }
-
         .qty-btn {
-            width: 30px;
-            height: 30px;
+            width: 30px; height: 30px;
             border: none;
             background: var(--crimson);
             color: #fff;
@@ -630,24 +522,12 @@
             align-items: center;
             justify-content: center;
         }
-
-        .qty-btn.minus {
-            background: #DFD0B8;
-            color: var(--earth-dark);
-        }
-
-        .qty-num {
-            min-width: 30px;
-            text-align: center;
-            font-weight: 900;
-            font-size: 0.95rem;
-        }
+        .qty-btn.minus { background: #DFD0B8; color: var(--earth-dark); }
+        .qty-num { min-width: 30px; text-align: center; font-weight: 900; font-size: 0.95rem; }
 
         .floating-cart-bar {
             position: fixed;
-            bottom: 16px;
-            right: 16px;
-            left: 16px;
+            bottom: 16px; right: 16px; left: 16px;
             max-width: 640px;
             margin: 0 auto;
             background: linear-gradient(135deg, var(--wood-darkest) 0%, var(--wood-medium) 100%);
@@ -662,32 +542,19 @@
             z-index: 95;
             cursor: pointer;
         }
-
-        .cart-bar-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
+        .cart-bar-info { display: flex; align-items: center; gap: 12px; }
         .cart-badge-count {
             background: linear-gradient(135deg, var(--gold-bright), var(--gold));
             color: var(--wood-darkest);
             font-weight: 900;
-            width: 36px;
-            height: 36px;
+            width: 36px; height: 36px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.05rem;
         }
-
-        .cart-bar-total {
-            font-size: 1.05rem;
-            font-weight: 900;
-            color: var(--gold-bright);
-        }
-
+        .cart-bar-total { font-size: 1.05rem; font-weight: 900; color: var(--gold-bright); }
         .cart-bar-action {
             background: var(--turquoise);
             color: #fff;
@@ -701,8 +568,7 @@
         }
 
         .modal-backdrop {
-            position: fixed;
-            inset: 0;
+            position: fixed; inset: 0;
             background: rgba(20, 11, 6, 0.76);
             backdrop-filter: blur(5px);
             z-index: 200;
@@ -712,11 +578,7 @@
             padding: 14px;
             overflow-y: auto;
         }
-
-        .modal-backdrop.open {
-            display: flex;
-        }
-
+        .modal-backdrop.open { display: flex; }
         .modal-box {
             background: var(--bg-paper);
             border: 2.5px solid var(--gold);
@@ -729,11 +591,7 @@
             box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
             overflow: hidden;
         }
-
-        .modal-box.modal-large {
-            max-width: 960px;
-        }
-
+        .modal-box.modal-large { max-width: 960px; }
         .modal-header {
             background: linear-gradient(135deg, var(--wood-darkest), var(--wood-medium));
             color: #fff;
@@ -743,32 +601,17 @@
             justify-content: space-between;
             border-bottom: 3px solid var(--gold);
         }
-
-        .modal-header h3 {
-            font-size: 1.12rem;
-            color: var(--gold-bright);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
+        .modal-header h3 { font-size: 1.12rem; color: var(--gold-bright); display: flex; align-items: center; gap: 8px; }
         .modal-close {
             background: rgba(255, 255, 255, 0.14);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: #fff;
-            width: 34px;
-            height: 34px;
+            width: 34px; height: 34px;
             border-radius: 10px;
             font-size: 1.2rem;
             cursor: pointer;
         }
-
-        .modal-body {
-            padding: 18px;
-            overflow-y: auto;
-            flex: 1;
-        }
-
+        .modal-body { padding: 18px; overflow-y: auto; flex: 1; }
         .modal-footer {
             padding: 14px 18px;
             background: #F5EBDC;
@@ -780,14 +623,12 @@
             align-items: center;
         }
 
-        /* استایل‌های بهینه‌شده پنل مدیریت (Admin Dashboard) */
         .admin-stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 10px;
             margin-bottom: 16px;
         }
-
         .stat-card {
             background: linear-gradient(135deg, #FFFDF8, #F4E8D1);
             border: 1.5px solid var(--border-ornate);
@@ -795,18 +636,8 @@
             padding: 10px 14px;
             text-align: center;
         }
-
-        .stat-card .stat-val {
-            font-size: 1.35rem;
-            font-weight: 900;
-            color: var(--turquoise-dark);
-        }
-
-        .stat-card .stat-lbl {
-            font-size: 0.78rem;
-            color: var(--earth-muted);
-            font-weight: 700;
-        }
+        .stat-card .stat-val { font-size: 1.35rem; font-weight: 900; color: var(--turquoise-dark); }
+        .stat-card .stat-lbl { font-size: 0.78rem; color: var(--earth-muted); font-weight: 700; }
 
         .admin-tabs {
             display: flex;
@@ -816,7 +647,6 @@
             padding-bottom: 10px;
             overflow-x: auto;
         }
-
         .admin-tab-btn {
             padding: 9px 16px;
             border-radius: 11px;
@@ -829,12 +659,7 @@
             cursor: pointer;
             white-space: nowrap;
         }
-
-        .admin-tab-btn.active {
-            background: var(--wood-dark);
-            color: var(--gold-bright);
-            border-color: var(--gold);
-        }
+        .admin-tab-btn.active { background: var(--wood-dark); color: var(--gold-bright); border-color: var(--gold); }
 
         .admin-form-card {
             background: #FAF3E4;
@@ -843,22 +668,13 @@
             padding: 16px;
             margin-bottom: 18px;
         }
-
         .admin-form-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
             gap: 12px;
         }
-
         .form-group { margin-bottom: 12px; }
-        .form-label {
-            display: block;
-            font-size: 0.84rem;
-            font-weight: 800;
-            margin-bottom: 5px;
-            color: var(--wood-dark);
-        }
-
+        .form-label { display: block; font-size: 0.84rem; font-weight: 800; margin-bottom: 5px; color: var(--wood-dark); }
         .form-control {
             width: 100%;
             padding: 9px 12px;
@@ -883,13 +699,7 @@
             border-radius: 12px;
             margin-bottom: 12px;
         }
-
-        .admin-items-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
+        .admin-items-list { display: flex; flex-direction: column; gap: 10px; }
         .admin-item-row {
             background: #fff;
             border: 1.5px solid var(--border-ornate);
@@ -900,11 +710,7 @@
             align-items: center;
             justify-content: space-between;
             gap: 12px;
-            transition: border-color 0.2s;
         }
-        .admin-item-row:hover { border-color: var(--gold); }
-
-        /* ویرایش سریع قیمت مستقیم در لیست ادمین */
         .quick-price-box {
             display: inline-flex;
             align-items: center;
@@ -914,7 +720,6 @@
             border-radius: 8px;
             border: 1px solid var(--border-ornate);
         }
-
         .quick-price-input {
             width: 95px;
             border: 1px solid #C9B28B;
@@ -989,11 +794,7 @@
             opacity: 0.7;
             transition: all 0.2s;
         }
-        .admin-secret-trigger:hover {
-            opacity: 1;
-            background: var(--crimson);
-            transform: translateY(-2px);
-        }
+        .admin-secret-trigger:hover { opacity: 1; background: var(--crimson); transform: translateY(-2px); }
 
         .toast-container {
             position: fixed;
@@ -1028,6 +829,16 @@
             border-radius: var(--radius-arch);
         }
 
+        .guide-box {
+            background: #FFFBEA;
+            border: 1.5px dashed var(--gold-dark);
+            border-radius: 12px;
+            padding: 14px;
+            margin-bottom: 14px;
+            font-size: 0.84rem;
+            line-height: 1.7;
+        }
+
         @media (max-width: 600px) {
             .persian-poster-frame { padding: 28px 12px 22px; }
             .corner-spandrel { width: 80px; height: 80px; }
@@ -1040,12 +851,11 @@
 
     <div id="toastContainer" class="toast-container"></div>
 
-    <!-- ۱. بنر و لوگوی سه‌بعدی الهام‌گرفته از پوستر اصلی کافه سنتی میراژ -->
+    <!-- بنر و لوگوی سه‌بعدی الهام‌گرفته از بنر اصلی کافه سنتی میراژ -->
     <header class="hero-banner-wrapper">
         <div class="persian-poster-frame" id="poster3D">
             <div class="golden-spotlight"></div>
 
-            <!-- لچکی‌های اسلیمی فیروزه‌ای چهار گوشه (کاملاً آفلاین با SVG) -->
             <svg class="corner-spandrel top-right" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 0 H120 V120 C120 65 65 0 0 0 Z" fill="#138A7E" stroke="#D4AF37" stroke-width="3"/>
                 <path d="M25 0 H120 V95 C95 52 52 15 25 0 Z" fill="#1A3A6E" stroke="#F3D068" stroke-width="1.5"/>
@@ -1069,7 +879,6 @@
                 <circle cx="92" cy="28" r="10" fill="#D4AF37"/>
             </svg>
 
-            <!-- بازطراحی برداری و دقیق لوگوی Cafe Mirage (حروف C و M همراه با فنجان و برگ سبز) -->
             <div class="logo-3d-stage">
                 <svg class="cm-emblem-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <defs>
@@ -1088,22 +897,15 @@
                             <stop offset="100%" stop-color="#33691E"/>
                         </linearGradient>
                     </defs>
-                    <!-- هلال بیرونی حرف C -->
                     <path d="M 148 48 A 74 74 0 1 0 148 158" fill="none" stroke="url(#copperGrad)" stroke-width="14" stroke-linecap="round"/>
                     <path d="M 148 48 A 74 74 0 1 0 148 158" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" opacity="0.7"/>
-                    <!-- ستون‌ها و حرف M -->
                     <path d="M 68 148 V 64 L 106 112 L 144 64 V 148" fill="none" stroke="url(#goldGrad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                    <!-- بخار ملایم بالای فنجان -->
                     <path class="steam-path" d="M 100 92 Q 94 80 102 70" fill="none" stroke="#FFF2C2" stroke-width="2.2" stroke-linecap="round"/>
                     <path class="steam-path s2" d="M 112 90 Q 118 78 109 68" fill="none" stroke="#FFF2C2" stroke-width="2.2" stroke-linecap="round"/>
-                    <!-- دو برگ سبز چای/قهوه -->
                     <path d="M 106 122 Q 90 105 84 96 Q 98 98 106 116 Z" fill="url(#leafGrad)" stroke="#D4AF37" stroke-width="1"/>
                     <path d="M 106 122 Q 122 103 130 94 Q 114 96 106 116 Z" fill="url(#leafGrad)" stroke="#D4AF37" stroke-width="1"/>
-                    <!-- فنجان مسی/طلایی وسط -->
                     <path d="M 86 124 H 126 C 126 142 118 152 106 152 C 94 152 86 142 86 124 Z" fill="url(#copperGrad)" stroke="url(#goldGrad)" stroke-width="2"/>
-                    <!-- دسته فنجان -->
                     <path d="M 126 128 C 135 128 135 142 123 144" fill="none" stroke="url(#goldGrad)" stroke-width="3.5" stroke-linecap="round"/>
-                    <!-- نعلبکی ظریف زیر فنجان -->
                     <path d="M 78 156 Q 106 149 134 156" fill="none" stroke="url(#goldGrad)" stroke-width="3" stroke-linecap="round"/>
                 </svg>
                 <div class="brand-latin">Cafe mirage</div>
@@ -1112,14 +914,12 @@
             <h1 class="cafe-persian-3d-title" id="cafeMainTitle">کافه سنتی میراژ</h1>
             <p class="cafe-tagline-banner" id="cafeMainTagline">سرو انواع صبحانه سنتی، قهوه، نوشیدنی‌های گرم و سرد، چای و دمنوش</p>
 
-            <!-- جداکننده اسلیمی وسط -->
             <div style="display:flex; align-items:center; justify-content:center; gap:10px; max-width:300px; margin:8px auto;">
                 <span style="flex:1; height:1.5px; background:linear-gradient(to left, transparent, var(--gold));"></span>
                 <span style="color:var(--gold); font-size:1.1rem;">❖</span>
                 <span style="flex:1; height:1.5px; background:linear-gradient(to right, transparent, var(--gold));"></span>
             </div>
 
-            <!-- کتیبه‌های طلایی اطلاعات تماس و آدرس مطابق بنر شما -->
             <div class="banner-plaques-wrap">
                 <div class="plaques-top-row">
                     <a href="tel:09386963359" id="bannerPhoneLink" class="gold-plaque">
@@ -1142,7 +942,7 @@
         </div>
     </header>
 
-    <!-- ۲. نوار چسبان جستجو و دسته‌بندی‌ها -->
+    <!-- نوار چسبان جستجو و دسته‌بندی‌ها -->
     <section class="controls-container" aria-label="جستجو و دسته‌بندی‌ها">
         <div class="controls-inner">
             <div class="search-box-wrap">
@@ -1166,10 +966,10 @@
         </div>
     </section>
 
-    <!-- ۳. کانتینر اصلی کارت‌های منو -->
+    <!-- کانتینر اصلی کارت‌های منو -->
     <main id="menuContainer" class="main-content"></main>
 
-    <!-- ۴. نوار شناور سبد سفارش مشتری -->
+    <!-- نوار شناور سبد سفارش مشتری -->
     <div id="floatingCartBar" class="floating-cart-bar" onclick="openCartModal()">
         <div class="cart-bar-info">
             <div id="cartTotalCount" class="cart-badge-count">۰</div>
@@ -1181,7 +981,7 @@
         <button type="button" class="cart-bar-action">تکمیل و ثبت سفارش ◂</button>
     </div>
 
-    <!-- ۵. مودال صورت‌حساب مشتری -->
+    <!-- مودال صورت‌حساب مشتری -->
     <div id="cartModalBackdrop" class="modal-backdrop" onclick="handleBackdropClick(event, 'cartModalBackdrop')">
         <div class="modal-box" role="dialog" aria-labelledby="cartModalTitle">
             <div class="modal-header">
@@ -1219,7 +1019,7 @@
         </div>
     </div>
 
-    <!-- ۶. مودال ورود به مدیریت -->
+    <!-- مودال ورود به مدیریت -->
     <div id="adminLoginBackdrop" class="modal-backdrop" onclick="handleBackdropClick(event, 'adminLoginBackdrop')">
         <div class="modal-box" style="max-width: 400px;" role="dialog">
             <div class="modal-header">
@@ -1229,7 +1029,7 @@
             <form onsubmit="handleAdminLogin(event)">
                 <div class="modal-body">
                     <p style="font-size: 0.85rem; color: var(--earth-muted); margin-bottom: 12px;">
-                        جهت ویرایش سریع قیمت‌ها، افزودن آیتم یا پشتیبان‌گیری برای گیت‌هاب، رمز عبور ادمین را وارد کنید.
+                        رمز عبور ادمین را وارد کنید (رمز پیش‌فرض: <code>1234567891011</code>).
                     </p>
                     <div class="form-group">
                         <label class="form-label" for="adminPasswordInput">رمز عبور مدیریت:</label>
@@ -1244,7 +1044,7 @@
         </div>
     </div>
 
-    <!-- ۷. پنل مدیریت پیشرفته و بهینه‌شده (Admin Panel) -->
+    <!-- پنل مدیریت -->
     <div id="adminPanelBackdrop" class="modal-backdrop" onclick="handleBackdropClick(event, 'adminPanelBackdrop')">
         <div class="modal-box modal-large" role="dialog">
             <div class="modal-header">
@@ -1252,7 +1052,6 @@
                 <button type="button" class="modal-close" onclick="closeAdminPanel()">×</button>
             </div>
             <div class="modal-body">
-                <!-- خلاصه وضعیت آماری منو -->
                 <div class="admin-stats-grid">
                     <div class="stat-card">
                         <div class="stat-val" id="statTotalItems">۰</div>
@@ -1268,14 +1067,13 @@
                     </div>
                 </div>
 
-                <!-- تب‌های مدیریت -->
                 <div class="admin-tabs">
-                    <button type="button" class="admin-tab-btn active" id="tabBtnItems" onclick="switchAdminTab('items')">📋 مدیریت سریع آیتم‌ها و قیمت</button>
+                    <button type="button" class="admin-tab-btn active" id="tabBtnItems" onclick="switchAdminTab('items')">📋 مدیریت آیتم‌ها و قیمت‌ها</button>
                     <button type="button" class="admin-tab-btn" id="tabBtnCafeInfo" onclick="switchAdminTab('info')">🏪 مشخصات بنر و اطلاعات کافه</button>
-                    <button type="button" class="admin-tab-btn" id="tabBtnBackup" onclick="switchAdminTab('backup')">📦 پشتیبان‌گیری، گیت‌هاب و امنیت</button>
+                    <button type="button" class="admin-tab-btn" id="tabBtnBackup" onclick="switchAdminTab('backup')">🚀 انتشار در گیت‌هاب برای همه کاربران</button>
                 </div>
 
-                <!-- تب ۱: مدیریت آیتم‌ها با قابلیت ویرایش درجا -->
+                <!-- تب ۱: مدیریت آیتم‌ها -->
                 <div id="adminTabItems">
                     <form id="adminItemForm" class="admin-form-card" onsubmit="handleSaveMenuItem(event)">
                         <h4 id="adminFormHeading" style="margin-bottom: 12px; color: var(--crimson);">➕ افزودن آیتم جدید به منو</h4>
@@ -1321,7 +1119,6 @@
                         </div>
                     </form>
 
-                    <!-- نوار ابزار فیلتر و تغییر درصدی قیمت‌ها -->
                     <div class="admin-toolbar">
                         <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; flex: 1;">
                             <input type="text" id="adminFilterInput" class="form-control" style="max-width: 220px;" placeholder="🔍 جستجو در لیست ادمین..." oninput="renderAdminItemsList()">
@@ -1336,7 +1133,7 @@
                             </select>
                         </div>
                         <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
-                            <span style="font-size: 0.78rem; font-weight: 800;">تغییر کلی قیمت‌ها:</span>
+                            <span style="font-size: 0.78rem; font-weight: 800;">تغییر کلی:</span>
                             <button type="button" class="btn btn-outline btn-sm" onclick="adjustAllPrices(10)">+۱۰٪</button>
                             <button type="button" class="btn btn-outline btn-sm" onclick="adjustAllPrices(-10)">−۱۰٪</button>
                         </div>
@@ -1345,13 +1142,13 @@
                     <div id="adminItemsList" class="admin-items-list"></div>
                 </div>
 
-                <!-- تب ۲: ویرایش اطلاعات بنر کافه (شماره تماس، آدرس، اینستاگرام) -->
+                <!-- تب ۲: ویرایش بنر -->
                 <div id="adminTabInfo" style="display: none;">
                     <form class="admin-form-card" onsubmit="handleSaveCafeInfo(event)">
-                        <h4 style="margin-bottom: 12px; color: var(--turquoise-dark);">🏪 ویرایش اطلاعات بنر بالای صفحه</h4>
+                        <h4 style="margin-bottom: 12px; color: var(--turquoise-dark);">🏪 ویرایش مشخصات بنر کافه</h4>
                         <div class="admin-form-grid">
                             <div class="form-group">
-                                <label class="form-label" for="infoTitleInput">عنوان اصلی کافه:</label>
+                                <label class="form-label" for="infoTitleInput">عنوان کافه:</label>
                                 <input type="text" id="infoTitleInput" class="form-control" required>
                             </div>
                             <div class="form-group">
@@ -1375,20 +1172,32 @@
                     </form>
                 </div>
 
-                <!-- تب ۳: خروجی گیت‌هاب، پشتیبان‌گیری JSON و امنیت -->
+                <!-- تب ۳: انتشار همگانی در گیت‌هاب -->
                 <div id="adminTabBackup" style="display: none;">
                     <div class="admin-form-card">
-                        <h4 style="margin-bottom: 8px; color: var(--wood-dark);">📦 خروجی و ورودی اطلاعات (مخصوص انتشار در GitHub)</h4>
-                        <p style="font-size: 0.84rem; color: var(--earth-muted); margin-bottom: 12px;">
-                            شما می‌توانید از کل منوی ویرایش‌شده خود فایل پشتیبان (JSON) دانلود کنید، یا کد آرایه منو را کپی کرده و در فایل <code>index.html</code> گیت‌هاب خود جایگزین نمایید تا برای همه کاربران اینترنت آپدیت شود.
-                        </p>
-                        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                            <button type="button" class="btn btn-primary" onclick="exportMenuJson()">⬇️ دانلود فایل پشتیبان (JSON)</button>
-                            <button type="button" class="btn btn-outline" onclick="copyMenuCodeForGithub()">📋 کپی کد منو برای قرار دادن در گیت‌هاب</button>
+                        <h4 style="color: var(--crimson); margin-bottom: 8px;">🎯 چرا تغییرات فقط روی گوشی خودتان دیده می‌شود؟</h4>
+                        <div class="guide-box">
+                            <strong>علت:</strong> سرور گیت‌هاب کاملاً استاتیک است و دیتابیس ندارد. وقتی با گوشی‌تان آیتم یا قیمتی را تغییر می‌دهید، فقط روی <strong>حافظه داخلی مرورگر گوشی خودتان</strong> ذخیره می‌شود.<br>
+                            برای اینکه تغییرات شما برای <strong>«تمام مشتریان و دوستانتان»</strong> هم اعمال شود، این دکمه را بزنید و کدی که به شما می‌دهد را در گیت‌هاب جایگزین کنید:
+                        </div>
+
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;">
+                            <button type="button" class="btn btn-primary" onclick="copySyncDataSnippet()" style="font-size: 0.95rem; padding: 12px 18px;">
+                                📋 کپی کد بروزرسانی فوری برای گیت‌هاب
+                            </button>
+                            <button type="button" class="btn btn-outline" onclick="exportMenuJson()">⬇️ دانلود پشتیبان (JSON)</button>
                             <label class="btn btn-outline" style="cursor: pointer;">
-                                ⬆️ بارگذاری فایل پشتیبان
+                                ⬆️ بازیابی فایل پشتیبان
                                 <input type="file" accept=".json" style="display: none;" onchange="importMenuJson(event)">
                             </label>
+                        </div>
+
+                        <div style="background: #F4ECE1; padding: 14px; border-radius: 12px; border: 1px solid var(--border-ornate);">
+                            <h5 style="margin-bottom: 6px; font-weight: 800;">راهنمای ۲ مرحله‌ای برای اعمال همگانی:</h5>
+                            <ol style="margin-right: 18px; font-size: 0.85rem; line-height: 1.8;">
+                                <li>دکمه سبز بالا را بزنید تا کل منوی ویرایش‌شده شما کپی شود.</li>
+                                <li>وارد گیت‌هاب خود شوید، روی دکمه ویرایش (✏️) فایل <code>index.html</code> بزنید، دنبال عبارت <code>/* === START_SYNC_DATA === */</code> بگردید و کپی شده را تا انتهای <code>/* === END_SYNC_DATA === */</code> جایگزین (Paste) کرده و Commit کنید.</li>
+                            </ol>
                         </div>
                     </div>
 
@@ -1409,44 +1218,34 @@
 
                     <div class="admin-form-card" style="background: #FFF6F6; border-color: #F1B9B9;">
                         <h4 style="color: var(--danger); margin-bottom: 6px;">⚠️ بازنشانی کامل به تنظیمات اولیه کارخانه</h4>
-                        <p style="font-size: 0.84rem; color: var(--earth-muted); margin-bottom: 12px;">
-                            بازگرداندن تمام آیتم‌ها، اطلاعات بنر و رمز عبور به حالت پیش‌فرض اولیه (`1234567891011`).
-                        </p>
                         <div id="factoryResetConfirmArea" style="display: none; padding: 12px; background: #FDE8E8; border-radius: 10px; margin-bottom: 10px;">
-                            <p style="font-weight: 800; color: var(--danger); margin-bottom: 8px;">آیا مطمئن هستید که همه تغییرات پاک و به حالت کارخانه بازگردد؟</p>
+                            <p style="font-weight: 800; color: var(--danger); margin-bottom: 8px;">تمام تغییرات و کش مرورگر پاک شود؟</p>
                             <div style="display: flex; gap: 8px;">
-                                <button type="button" class="btn btn-crimson btn-sm" onclick="executeFactoryReset()">بله، بازنشانی شود</button>
+                                <button type="button" class="btn btn-crimson btn-sm" onclick="executeFactoryReset()">بله، پاک شود</button>
                                 <button type="button" class="btn btn-outline btn-sm" onclick="toggleFactoryResetConfirm(false)">انصراف</button>
                             </div>
                         </div>
-                        <button type="button" id="factoryResetInitBtn" class="btn btn-danger" onclick="toggleFactoryResetConfirm(true)">🔄 بازنشانی به حالت کارخانه</button>
+                        <button type="button" id="factoryResetInitBtn" class="btn btn-danger" onclick="toggleFactoryResetConfirm(true)">🔄 بازنشانی به داده‌های سرور</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ۸. فوتر سنتی -->
     <footer class="traditional-footer">
         <p style="color: var(--gold-bright); font-weight: 800; font-size: 1rem; margin-bottom: 6px;">«کافه سنتی میراژ؛ میعادگاه اصالت، عطر قهوه و چای قندپهلو در شوشتر»</p>
-        <p style="font-size: 0.8rem; color: #9E8C7A;">نسخه تک‌صفحه‌ای (Single-Page) آماده میزبانی در GitHub Pages • قابلیت اجرای ۱۰۰٪ آفلاین</p>
+        <p style="font-size: 0.8rem; color: #9E8C7A;">نسخه تک‌صفحه‌ای اختصاصی گیت‌هاب • نسخه داده: <span id="footerDataVersion"></span></p>
     </footer>
 
-    <!-- دکمه دسترسی سریع به پنل مدیریت -->
     <button type="button" class="admin-secret-trigger" onclick="openAdminTrigger()" title="مدیریت منو">
         <span>⚙️</span>
         <span>مدیریت</span>
     </button>
 
     <script>
-        const STORAGE_KEYS = {
-            MENU: 'mirage_cafe_menu_v2',
-            INFO: 'mirage_cafe_info_v2',
-            PASSWORD: 'mirage_cafe_admin_pass_v1',
-            LAST_ORDER: 'mirage_cafe_last_order_v1'
-        };
-
-        const DEFAULT_PASSWORD = '1234567891011';
+        /* === START_SYNC_DATA === */
+        // این بخش هنگام بروزرسانی در گیت‌هاب جایگزین می‌شود
+        const SERVER_MENU_VERSION = "2026.10.1";
 
         const DEFAULT_CAFE_INFO = {
             title: 'کافه سنتی میراژ',
@@ -1456,18 +1255,7 @@
             address: 'شوشتر، کوی نیرو، روبه‌روی اداره آب و فاضلاب'
         };
 
-        const CATEGORIES = [
-            { id: 'all', title: 'همه بخش‌ها', icon: '❖', sub: 'تمام انتخاب‌های کافه میراژ' },
-            { id: 'breakfast', title: 'میز صبحانه سنتی', icon: '🍳', sub: 'در ظرف مسی و سفالی با نان سنگک داغ' },
-            { id: 'coffee', title: 'قهوه و بار گرم و سرد', icon: '☕', sub: 'قهوه ترک در جذوه مسی، اسپرسو و نوشیدنی‌های سرد' },
-            { id: 'tea', title: 'چای و نوشیدنی‌های گرم', icon: '🫖', sub: 'چای سماوری در استکان کمرباریک' },
-            { id: 'herbal', title: 'دمنوش‌های سنتی و شربت‌ها', icon: '🌿', sub: 'دمنوش‌های گیاهی در قوری شیشه‌ای و شربت‌های خنک' },
-            { id: 'dessert', title: 'شیرینی و دسر سنتی', icon: '🥮', sub: 'باقلوا، رنگینک و دسرهای اصیل' },
-            { id: 'hookah', title: 'قلیان و مخلفات', icon: '🏺', sub: 'سرویس کامل قلیان به همراه چای و تنقلات' }
-        ];
-
         const DEFAULT_MENU_ITEMS = [
-            // ۱. صبحانه سنتی (الهام گرفته از سینی مسی بنر)
             {
                 id: 'item_bf_1',
                 category: 'breakfast',
@@ -1504,8 +1292,6 @@
                 available: true,
                 badge: ''
             },
-
-            // ۲. قهوه و بار گرم و سرد (الهام گرفته از جذوه مسی و فنجان اسپرسو در بنر)
             {
                 id: 'item_cf_1',
                 category: 'coffee',
@@ -1538,12 +1324,10 @@
                 category: 'coffee',
                 title: 'آیس لاته کارامل و موهیتو نعنا تازه',
                 price: 95000,
-                desc: 'نوشیدنی خنک و گوارا با برگ‌های نعنا تازه، لیموترش و یخ خردشده (مطابق تصویر بنر).',
+                desc: 'نوشیدنی خنک و گوارا با برگ‌های نعنا تازه، لیموترش و یخ خردشده.',
                 available: true,
                 badge: 'خنک و محبوب'
             },
-
-            // ۳. چای و نوشیدنی‌های گرم
             {
                 id: 'item_tea_1',
                 category: 'tea',
@@ -1571,14 +1355,12 @@
                 available: true,
                 badge: ''
             },
-
-            // ۴. دمنوش‌های سنتی و عرقیجات
             {
                 id: 'item_hb_1',
                 category: 'herbal',
                 title: 'دمنوش گل‌گاوزبان، بهارنارنج و لیموعمانی',
                 price: 94000,
-                desc: 'سرو در قوری شیشه‌ای پیرکس وارمردار (مطابق بنر) به همراه نبات زعفرانی؛ آرام‌بخش و نشاط‌آور.',
+                desc: 'سرو در قوری شیشه‌ای پیرکس وارمردار به همراه نبات زعفرانی؛ آرام‌بخش و نشاط‌آور.',
                 available: true,
                 badge: 'آرام‌بخش'
             },
@@ -1600,8 +1382,6 @@
                 available: true,
                 badge: 'پیشنهاد تابستان'
             },
-
-            // ۵. شیرینی و دسر سنتی
             {
                 id: 'item_ds_1',
                 category: 'dessert',
@@ -1629,8 +1409,6 @@
                 available: true,
                 badge: ''
             },
-
-            // ۶. قلیان و مخلفات
             {
                 id: 'item_hk_1',
                 category: 'hookah',
@@ -1649,6 +1427,27 @@
                 available: true,
                 badge: ''
             }
+        ];
+        /* === END_SYNC_DATA === */
+
+        const STORAGE_KEYS = {
+            MENU: 'mirage_cafe_menu_v3',
+            INFO: 'mirage_cafe_info_v3',
+            VERSION: 'mirage_cafe_ver_v3',
+            PASSWORD: 'mirage_cafe_admin_pass_v1',
+            LAST_ORDER: 'mirage_cafe_last_order_v1'
+        };
+
+        const DEFAULT_PASSWORD = '1234567891011';
+
+        const CATEGORIES = [
+            { id: 'all', title: 'همه بخش‌ها', icon: '❖', sub: 'تمام انتخاب‌های کافه میراژ' },
+            { id: 'breakfast', title: 'میز صبحانه سنتی', icon: '🍳', sub: 'در ظرف مسی و سفالی با نان سنگک داغ' },
+            { id: 'coffee', title: 'قهوه و بار گرم و سرد', icon: '☕', sub: 'قهوه ترک در جذوه مسی، اسپرسو و نوشیدنی‌های سرد' },
+            { id: 'tea', title: 'چای و نوشیدنی‌های گرم', icon: '🫖', sub: 'چای سماوری در استکان کمرباریک' },
+            { id: 'herbal', title: 'دمنوش‌های سنتی و شربت‌ها', icon: '🌿', sub: 'دمنوش‌های گیاهی در قوری شیشه‌ای و شربت‌های خنک' },
+            { id: 'dessert', title: 'شیرینی و دسر سنتی', icon: '🥮', sub: 'باقلوا، رنگینک و دسرهای اصیل' },
+            { id: 'hookah', title: 'قلیان و مخلفات', icon: '🏺', sub: 'سرویس کامل قلیان به همراه چای و تنقلات' }
         ];
 
         let menuItems = [];
@@ -1693,41 +1492,43 @@
             }, 2800);
         }
 
+        // بررسی هوشمند نسخه داده: اگر نسخه در گیت‌هاب جدیدتر باشد، کش قدیمی گوشی کاربر خودکار پاک شده و منوی نو لود می‌شود
         function loadAppState() {
             try {
-                const storedMenu = localStorage.getItem(STORAGE_KEYS.MENU);
-                if (storedMenu) {
-                    const parsed = JSON.parse(storedMenu);
-                    menuItems = (Array.isArray(parsed) && parsed.length > 0)
-                        ? parsed
-                        : JSON.parse(JSON.stringify(DEFAULT_MENU_ITEMS));
-                } else {
-                    menuItems = JSON.parse(JSON.stringify(DEFAULT_MENU_ITEMS));
-                    saveMenuToStorage();
-                }
+                const localVersion = localStorage.getItem(STORAGE_KEYS.VERSION);
 
-                const storedInfo = localStorage.getItem(STORAGE_KEYS.INFO);
-                if (storedInfo) {
-                    cafeInfo = { ...DEFAULT_CAFE_INFO, ...JSON.parse(storedInfo) };
+                if (localVersion !== SERVER_MENU_VERSION) {
+                    // نسخه جدیدی در گیت‌هاب آپلود شده است؛ پاکسازی کش مرورگر کاربر
+                    menuItems = JSON.parse(JSON.stringify(DEFAULT_MENU_ITEMS));
+                    cafeInfo = { ...DEFAULT_CAFE_INFO };
+                    localStorage.setItem(STORAGE_KEYS.MENU, JSON.stringify(menuItems));
+                    localStorage.setItem(STORAGE_KEYS.INFO, JSON.stringify(cafeInfo));
+                    localStorage.setItem(STORAGE_KEYS.VERSION, SERVER_MENU_VERSION);
+                } else {
+                    const storedMenu = localStorage.getItem(STORAGE_KEYS.MENU);
+                    menuItems = storedMenu ? JSON.parse(storedMenu) : JSON.parse(JSON.stringify(DEFAULT_MENU_ITEMS));
+
+                    const storedInfo = localStorage.getItem(STORAGE_KEYS.INFO);
+                    cafeInfo = storedInfo ? { ...DEFAULT_CAFE_INFO, ...JSON.parse(storedInfo) } : { ...DEFAULT_CAFE_INFO };
                 }
 
                 if (!localStorage.getItem(STORAGE_KEYS.PASSWORD)) {
                     localStorage.setItem(STORAGE_KEYS.PASSWORD, DEFAULT_PASSWORD);
                 }
 
+                document.getElementById('footerDataVersion').textContent = SERVER_MENU_VERSION;
                 applyCafeInfoToBanner();
                 checkSavedOrdersBadge();
             } catch (err) {
                 menuItems = JSON.parse(JSON.stringify(DEFAULT_MENU_ITEMS));
+                cafeInfo = { ...DEFAULT_CAFE_INFO };
             }
         }
 
         function saveMenuToStorage() {
             try {
                 localStorage.setItem(STORAGE_KEYS.MENU, JSON.stringify(menuItems));
-            } catch (err) {
-                showToast('خطا در ذخیره‌سازی حافظه مرورگر');
-            }
+            } catch (err) {}
         }
 
         function applyCafeInfoToBanner() {
@@ -1739,7 +1540,6 @@
             document.getElementById('bannerInstaLink').href = `https://instagram.com/${cafeInfo.instagram.replace('@', '')}`;
             document.getElementById('bannerAddressText').textContent = cafeInfo.address;
 
-            // پر کردن فرم در پنل مدیریت
             const titleEl = document.getElementById('infoTitleInput');
             if (titleEl) {
                 titleEl.value = cafeInfo.title;
@@ -1761,7 +1561,7 @@
             };
             localStorage.setItem(STORAGE_KEYS.INFO, JSON.stringify(cafeInfo));
             applyCafeInfoToBanner();
-            showToast('✅ مشخصات بنر کافه با موفقیت بروزرسانی شد.');
+            showToast('✅ مشخصات بنر کافه در گوشی شما ذخیره شد.');
         }
 
         function getAdminPassword() {
@@ -2081,15 +1881,12 @@
                 document.body.removeChild(temp);
             } catch (err) {}
 
-            // ارسال مستقیم به واتس‌اپ شماره کافه
             const cleanPhone = cafeInfo.phone.replace(/^0/, '98').replace(/\D/g, '');
             window.open(`https://wa.me/${cleanPhone}?text=${encodeURIComponent(text)}`, '_blank');
             showToast('متن سفارش کپی شد و در حال انتقال به پیام‌رسان...');
         }
 
-        /* ==========================================================================
-           مدیریت پیشرفته ادمین (ویرایش سریع قیمت درجا، تغییر درصدی، خروجی گیت‌هاب)
-           ========================================================================== */
+        /* بخش مدیریت ادمین و همگام‌سازی گیت‌هاب */
         function openAdminTrigger() {
             if (isAdminAuthenticated) {
                 openAdminPanel();
@@ -2183,7 +1980,7 @@
                             ${item.available ? 'ناموجود کن' : 'موجود کن'}
                         </button>
                         <button type="button" class="btn btn-primary btn-sm" onclick="startEditItem('${item.id}')">✎ ویرایش</button>
-                        <button type="button" class="btn btn-outline btn-sm" onclick="duplicateMenuItem('${item.id}')" title="کپی از آیتم">⧉</button>
+                        <button type="button" class="btn btn-outline btn-sm" onclick="duplicateMenuItem('${item.id}')" title="کپی">⧉</button>
                         <button type="button" class="btn btn-danger btn-sm" onclick="deleteMenuItem('${item.id}')">🗑</button>
                     </div>
                 `;
@@ -2198,20 +1995,19 @@
             saveMenuToStorage();
             renderMenu();
             updateFloatingCartBar();
-            showToast(`💰 قیمت «${item.title}» به ${formatPrice(item.price)} تومان تغییر یافت.`);
+            showToast(`قیمت «${item.title}» تغییر کرد.`);
         }
 
         function adjustAllPrices(percent) {
             const factor = 1 + (percent / 100);
             menuItems.forEach(item => {
-                // رند کردن به ۱۰۰۰ تومان نزدیک
                 item.price = Math.round((item.price * factor) / 1000) * 1000;
             });
             saveMenuToStorage();
             renderAdminItemsList();
             renderMenu();
             updateFloatingCartBar();
-            showToast(`✅ قیمت تمام آیتم‌ها ${toPersianDigits(Math.abs(percent))}٪ ${percent > 0 ? 'افزایش' : 'کاهش'} یافت.`);
+            showToast(`✅ تغییر درصدی با موفقیت اعمال شد.`);
         }
 
         function duplicateMenuItem(itemId) {
@@ -2227,7 +2023,7 @@
             renderAdminItemsList();
             renderCategoriesNav();
             renderMenu();
-            showToast('⧉ یک نسخه کپی از آیتم ایجاد شد.');
+            showToast('⧉ آیتم کپی شد.');
         }
 
         function handleSaveMenuItem(e) {
@@ -2246,14 +2042,14 @@
                 const idx = menuItems.findIndex(i => i.id === editId);
                 if (idx !== -1) {
                     menuItems[idx] = { ...menuItems[idx], title, category, price, badge, desc, available };
-                    showToast('✅ آیتم با موفقیت بروزرسانی شد.');
+                    showToast('✅ آیتم بروزرسانی شد.');
                 }
             } else {
                 menuItems.unshift({
                     id: 'item_' + Date.now(),
                     title, category, price, badge, desc, available
                 });
-                showToast('✅ آیتم جدید به منو اضافه شد.');
+                showToast('✅ آیتم جدید ذخیره شد.');
             }
 
             saveMenuToStorage();
@@ -2316,31 +2112,38 @@
             showToast(`🗑 «${title}» حذف شد.`);
         }
 
-        function exportMenuJson() {
-            const dataStr = JSON.stringify({ cafeInfo, menuItems }, null, 2);
-            const blob = new Blob([dataStr], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'mirage-cafe-backup.json';
-            a.click();
-            URL.revokeObjectURL(url);
-            showToast('⬇️ فایل پشتیبان منو دانلود شد.');
-        }
+        // تابع حیاتی: ساخت قطعه‌کد بروزرسانی با افزایش خودکار شماره نسخه
+        function copySyncDataSnippet() {
+            const newVersion = "v_" + Date.now();
+            const snippet = `/* === START_SYNC_DATA === */\n` +
+                `const SERVER_MENU_VERSION = "${newVersion}";\n\n` +
+                `const DEFAULT_CAFE_INFO = ${JSON.stringify(cafeInfo, null, 4)};\n\n` +
+                `const DEFAULT_MENU_ITEMS = ${JSON.stringify(menuItems, null, 4)};\n` +
+                `/* === END_SYNC_DATA === */`;
 
-        function copyMenuCodeForGithub() {
-            const code = `const DEFAULT_MENU_ITEMS = ${JSON.stringify(menuItems, null, 4)};`;
             try {
                 const temp = document.createElement('textarea');
-                temp.value = code;
+                temp.value = snippet;
                 document.body.appendChild(temp);
                 temp.select();
                 document.execCommand('copy');
                 document.body.removeChild(temp);
-                showToast('📋 کد آرایه منو کپی شد! می‌توانید در فایل index.html گیت‌هاب جایگزین کنید.');
-            } catch (e) {
-                showToast('خطا در کپی کد');
+                showToast('📋 کد کپی شد! در گیت‌هاب بین دو عبارت START_SYNC_DATA و END_SYNC_DATA جایگزین کنید.');
+            } catch (err) {
+                prompt('کد زیر را کپی کرده و در گیت‌هاب قرار دهید:', snippet);
             }
+        }
+
+        function exportMenuJson() {
+            const dataStr = JSON.stringify({ cafeInfo, menuItems, version: SERVER_MENU_VERSION }, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `mirage-menu-${Date.now()}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast('⬇️ فایل پشتیبان منو دانلود شد.');
         }
 
         function importMenuJson(event) {
@@ -2362,9 +2165,9 @@
                     renderAdminItemsList();
                     renderCategoriesNav();
                     renderMenu();
-                    showToast('✅ فایل پشتیبان با موفقیت بارگذاری شد.');
+                    showToast('✅ فایل پشتیبان بارگذاری شد.');
                 } catch (err) {
-                    showToast('❌ فایل انتخاب‌شده معتبر نیست.');
+                    showToast('❌ فایل معتبر نیست.');
                 }
             };
             reader.readAsText(file);
@@ -2375,7 +2178,7 @@
             const np = document.getElementById('newPasswordInput').value;
             const cp = document.getElementById('confirmPasswordInput').value;
             if (np !== cp) {
-                showToast('❌ رمز عبور و تکرار آن یکسان نیستند!');
+                showToast('❌ تکرار رمز عبور یکسان نیست!');
                 return;
             }
             localStorage.setItem(STORAGE_KEYS.PASSWORD, np);
@@ -2392,6 +2195,7 @@
         function executeFactoryReset() {
             localStorage.removeItem(STORAGE_KEYS.MENU);
             localStorage.removeItem(STORAGE_KEYS.INFO);
+            localStorage.removeItem(STORAGE_KEYS.VERSION);
             localStorage.removeItem(STORAGE_KEYS.PASSWORD);
             localStorage.removeItem(STORAGE_KEYS.LAST_ORDER);
             cart = {};
@@ -2404,7 +2208,7 @@
             renderCategoriesNav();
             renderMenu();
             updateFloatingCartBar();
-            showToast('🔄 تمام تنظیمات به حالت کارخانه بازنشانی شد.');
+            showToast('🔄 منو به تنظیمات گیت‌هاب بازنشانی شد.');
         }
 
         function handleBackdropClick(event, backdropId) {
@@ -2413,7 +2217,6 @@
             }
         }
 
-        // افکت سه‌بعدی ملایم بنر با حرکت موس در دسکتاپ
         window.addEventListener('DOMContentLoaded', () => {
             loadAppState();
             renderCategoriesNav();
